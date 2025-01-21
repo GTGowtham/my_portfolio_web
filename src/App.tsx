@@ -1,5 +1,7 @@
+// src/App.tsx
 import React, { useState } from 'react';
 import { Github, Linkedin, Mail as EmailIcon, BookOpen, Briefcase, Award, Code, ChevronDown, ChevronUp, FileDown } from 'lucide-react';
+import { app, analytics } from './firebaseConfig'; // Import the Firebase configuration
 
 function App() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -180,7 +182,7 @@ function App() {
               {activeSection === 'certs' && (
                 <div className="p-4 bg-gray-750 rounded-lg animate-fadeIn">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[
+                    {[ 
                       'Data Analysis using Python – Coursera, 2022',
                       'Excel Basics for Data Analysis – Coursera, 2022',
                       'Fundamentals of Deep Learning – NVIDIA, 2021',
